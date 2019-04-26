@@ -1,4 +1,4 @@
-Graphene and Django Tutorial using Relay
+Relay tutorial
 ========================================
 
 Graphene has a number of additional features that are designed to make

@@ -7,7 +7,11 @@ Please read [UPGRADE-v2.0.md](https://github.com/graphql-python/graphene/blob/ma
 
 A [Django](https://www.djangoproject.com/) integration for [Graphene](http://graphene-python.org/).
 
-## Installation
+## Documentation
+
+[Visit the documentation to get started!](https://docs.graphene-python.org/projects/django/en/latest/)
+
+## Quickstart
 
 For installing graphene, just run this command in your shell
 
@@ -96,4 +100,4 @@ To learn more check out the following [examples](examples/):
 
 ## Contributing
 
-See [CONTRIBUTING.md](contributing.md)
+See [CONTRIBUTING.md](CONTRIBUTING.md)
