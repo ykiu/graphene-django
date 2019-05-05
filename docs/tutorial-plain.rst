@@ -168,10 +168,10 @@ Create ``cookbook/ingredients/schema.py`` and type the following:
         all_categories = graphene.List(CategoryType)
         all_ingredients = graphene.List(IngredientType)
 
-        def resolve_all_categories(self, info, **kwargs):
+        def resolve_all_categories(self, context, **kwargs):
             return Category.objects.all()
 
-        def resolve_all_ingredients(self, info, **kwargs):
+        def resolve_all_ingredients(self, context, **kwargs):
             # We can easily optimize query count in the resolve method
             return Ingredient.objects.select_related('category').all()
 
@@ -449,13 +449,13 @@ We can update our schema to support that, by adding new query for ``ingredient``
                                   name=graphene.String())
       all_ingredients = graphene.List(IngredientType)
 
-      def resolve_all_categories(self, info, **kwargs):
+      def resolve_all_categories(self, context, **kwargs):
           return Category.objects.all()
 
-      def resolve_all_ingredients(self, info, **kwargs):
+      def resolve_all_ingredients(self, context, **kwargs):
           return Ingredient.objects.all()
 
-      def resolve_category(self, info, **kwargs):
+      def resolve_category(self, context, **kwargs):
           id = kwargs.get('id')
           name = kwargs.get('name')
 
@@ -467,7 +467,7 @@ We can update our schema to support that, by adding new query for ``ingredient``
 
           return None
 
-      def resolve_ingredient(self, info, **kwargs):
+      def resolve_ingredient(self, context, **kwargs):
           id = kwargs.get('id')
           name = kwargs.get('name')
 
