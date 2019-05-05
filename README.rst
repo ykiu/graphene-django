@@ -52,7 +52,7 @@ serve the queries.
 
     urlpatterns = [
         # ...
-        url(r'^graphql', GraphQLView.as_view(graphiql=True)),
+        url(r'^graphql$', GraphQLView.as_view(graphiql=True)),
     ]
 
 Examples

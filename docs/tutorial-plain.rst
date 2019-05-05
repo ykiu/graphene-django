@@ -252,7 +252,7 @@ aforementioned GraphiQL we specify that on the parameters with ``graphiql=True``
 
     urlpatterns = [
         url(r'^admin/', admin.site.urls),
-        url(r'^graphql', GraphQLView.as_view(graphiql=True)),
+        url(r'^graphql$', GraphQLView.as_view(graphiql=True)),
     ]
 
 
@@ -270,7 +270,7 @@ as explained above, we can do so here using:
 
     urlpatterns = [
         url(r'^admin/', admin.site.urls),
-        url(r'^graphql', GraphQLView.as_view(graphiql=True, schema=schema)),
+        url(r'^graphql$', GraphQLView.as_view(graphiql=True, schema=schema)),
     ]
 
 

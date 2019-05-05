@@ -39,7 +39,7 @@ We need to add a graphql URL to the ``urls.py`` of your Django project:
 
     urlpatterns = [
         # ...
-        url(r'^graphql', GraphQLView.as_view(graphiql=True)),
+        url(r'^graphql$', GraphQLView.as_view(graphiql=True)),
     ]
 
 (Change ``graphiql=True`` to ``graphiql=False`` if you do not want to use the GraphiQL API browser.)

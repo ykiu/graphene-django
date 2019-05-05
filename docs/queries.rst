@@ -155,7 +155,7 @@ Info
 ~~~~
 
 The ``info`` argument passed to all resolve methods holds some useful information.
-For Graphene-Django, the ``info.context`` object is the ``HTTPRequest`` object
+For Graphene-Django, the ``info.context`` attribute is the ``HTTPRequest`` object
 that would be familiar to any Django developer. This gives you the full functionality
 of Django's ``HTTPRequest`` in your resolve methods, such as checking for authenticated users:
 
